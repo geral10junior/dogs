@@ -43,7 +43,7 @@ const LoginForm = () => {
       </Link>
       <div className={styles.signIn}>
         <h2 className={styles.subtitle}>Cadastre-se</h2>
-        <p>Aindaa não possui conta? Cadastre-se no site.</p>
+        <p>Ainda não possui conta? Cadastre-se no site.</p>
       </div>
       <Link className={stylesBtn.button} to="/login/criar">
         Cadastro
