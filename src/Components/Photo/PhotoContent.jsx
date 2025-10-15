@@ -1,17 +1,17 @@
 import React from "react";
 import styles from "./PhotoContent.module.css";
 import { Link } from "react-router-dom";
-import PhotoComment from "./PhotoComment";
+import PhotoComment from "./PhotoComments";
 import { UserContext } from "../../UserContext";
 import PhotoDelete from "./PhotoDelete";
 import Image from "../Helper/Image";
 
-const PhotoContent = ({ data }) => {
+const PhotoContent = ({ data, single }) => {
   const user = React.useContext(UserContext);
   const { photo, comments } = data;
 
   return (
-    <div className={styles.photo}>
+    <div className={`${styles.photo} ${single ? styles.single : ""}`}>
       <div className={styles.img}>
         <Image src={photo.src} alt={photo.title} />
       </div>
@@ -36,7 +36,7 @@ const PhotoContent = ({ data }) => {
           </ul>
         </div>
       </div>
-      <PhotoComment id={photo.id} comments={comments} />
+      <PhotoComment single={single} id={photo.id} comments={comments} />
     </div>
   );
 };
