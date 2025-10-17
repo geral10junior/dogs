@@ -29,7 +29,7 @@ const App = () => {
                 </ProtectedRoute>
               }
             />
-            <Route path="foto/:id" element={<Photo />} />
+            <Route path="foto/:id/*" element={<Photo />} />
             <Route path="perfil/:user" element={<UserProfile />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
