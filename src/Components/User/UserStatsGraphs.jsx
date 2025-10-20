@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./UserStatsGraphs.module.css";
 import { VictoryPie, VictoryChart, VictoryBar } from "victory";
+
 const UserStatsGraphs = ({ data }) => {
   const [graph, setGraph] = React.useState([]);
   const [total, setTotal] = React.useState(0);
